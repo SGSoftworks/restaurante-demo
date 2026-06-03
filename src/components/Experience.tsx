@@ -70,6 +70,23 @@ export default function Experience() {
           tl.to(nextQuote, { opacity: 1, duration: 1 }, 0);
         }
       });
+
+      // Exit transition for last chapter — fades out before pin releases
+      const lastIdx = chapters.length - 1;
+      const lastBg = bgRefs.current[lastIdx];
+      const lastQuote = quotes?.[lastIdx] as HTMLElement | undefined;
+      if (lastBg && lastQuote) {
+        const exitTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: `top+=${(lastIdx + 0.7) * 100}% top`,
+            end: `top+=${(lastIdx + 1) * 100}% top`,
+            scrub: 1,
+          },
+        });
+        exitTl.to(lastBg, { opacity: 0, duration: 1 }, 0);
+        exitTl.to(lastQuote, { opacity: 0, duration: 1 }, 0);
+      }
     }, sectionRef);
 
     return () => ctx.revert();
