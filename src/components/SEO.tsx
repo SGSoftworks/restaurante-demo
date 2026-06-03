@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const BASE_URL = "https://materia-restaurante.com";
+const BASE_URL = "https://restaurante-demo-chi.vercel.app";
 
 interface SEOProps {
   title: string;
