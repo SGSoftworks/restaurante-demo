@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-alt: "Cormorant Garamond", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-gold: #c9a84c;
+  --color-gold-dark: #a8882e;
+  --color-gold-light: #e8d48b;
+  --color-charcoal: #1a1a1a;
+  --color-charcoal-light: #2a2a2a;
+  --color-cream: #f5f0e8;
+  --color-warm-black: #0a0a0a;
+}
+
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: auto; }
+
+  body {
+    background-color: #000;
+    color: #f5f5f5;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: #000;
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+
+  input:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #000 inset;
+    -webkit-text-fill-color: #f5f5f5;
+  }
+
+  select option { background-color: #000; color: #f5f5f5; }
+}
+
+@layer utilities {
+  .text-mask-line {
+    display: block;
+    overflow: hidden;
+  }
+  .text-mask-line > span {
+    display: block;
+    will-change: transform;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+
+  .nav-fade-right {
+    mask-image: linear-gradient(to right, black calc(100% - 3rem), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 3rem), transparent 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
