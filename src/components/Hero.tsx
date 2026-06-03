@@ -79,7 +79,7 @@ export default function Hero() {
       <div ref={decorativeRef} className="absolute bottom-24 right-0 w-1/3 h-[1px] bg-gradient-to-l from-gold/60 via-gold/20 to-transparent origin-right" />
 
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-        <span className="font-sans text-white/30 text-[11px] tracking-[0.35em] uppercase">Descubre</span>
+        <span className="font-sans text-white/40 text-[11px] tracking-[0.35em] uppercase">Descubre</span>
         <div ref={scrollLineRef} className="w-[1px] h-14 bg-gold will-change-transform origin-top" />
       </div>
     </section>

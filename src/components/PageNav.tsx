@@ -22,7 +22,7 @@ export default function PageNav() {
               key={l.to}
               to={l.to}
               className={`font-sans text-xs tracking-[0.2em] uppercase whitespace-nowrap transition-colors duration-300 ${
-                location.pathname === l.to ? "text-gold" : "text-white/40 hover:text-white/70"
+                location.pathname === l.to ? "text-gold" : "text-white/50 hover:text-white/70"
               }`}
             >
               {l.label}

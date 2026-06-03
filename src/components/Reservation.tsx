@@ -101,7 +101,7 @@ export default function Reservation() {
               </div>
             </div>
 
-            <blockquote className="rsv-label font-alt text-white/50 text-lg md:text-xl italic leading-relaxed border-l-2 border-gold/30 pl-5">
+            <blockquote className="rsv-label font-alt text-white/70 text-lg md:text-xl italic leading-relaxed border-l-2 border-gold/30 pl-5">
               &ldquo;Cada mesa en Materia es una historia por descubrir. Una velada donde el tiempo se detiene y los sentidos despiertan.&rdquo;
             </blockquote>
 
@@ -115,7 +115,7 @@ export default function Reservation() {
                 { label: "Disponibilidad", value: "Mié — Dom", gold: true },
               ].map((item, i) => (
                 <div key={i}>
-                  <p className="font-sans text-white/15 text-[10px] tracking-[0.3em] uppercase mb-1.5">{item.label}</p>
+                  <p className="font-sans text-white/30 text-[10px] tracking-[0.3em] uppercase mb-1.5">{item.label}</p>
                   <p className={`font-serif text-sm ${item.gold ? "text-gold" : "text-white/60"}`}>{item.value}</p>
                 </div>
               ))}
@@ -124,12 +124,12 @@ export default function Reservation() {
             <div className="w-12 h-[1px] bg-gold/30" />
 
             <div className="rsv-extra space-y-4">
-              <p className="font-sans text-white/15 text-[10px] tracking-[0.3em] uppercase">Contacto</p>
+              <p className="font-sans text-white/30 text-[10px] tracking-[0.3em] uppercase">Contacto</p>
               <div className="space-y-2">
                 <p className="font-serif text-white/60 text-base">+1 (555) 123-4567</p>
                 <p className="font-serif text-white/60 text-base">reservas@materia.com</p>
               </div>
-              <p className="font-sans text-white/30 text-sm leading-relaxed pt-2">
+              <p className="font-sans text-white/50 text-sm leading-relaxed pt-2">
                 Av. Gastronómica 123<br />Ciudad, CP 28001
               </p>
             </div>
@@ -153,19 +153,19 @@ export default function Reservation() {
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Personal Info */}
                 <div className="space-y-6">
-                  <p className="font-sans text-white/15 text-[10px] tracking-[0.3em] uppercase">
+                  <p className="font-sans text-white/30 text-[10px] tracking-[0.3em] uppercase">
                     Información personal
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="rsv-card form-group">
-                      <label htmlFor="nombre-completo" className="block font-sans text-white/30 text-[11px] tracking-[0.2em] uppercase mb-2.5">Nombre completo</label>
+                      <label htmlFor="nombre-completo" className="block font-sans text-white/50 text-[11px] tracking-[0.2em] uppercase mb-2.5">Nombre completo</label>
                       <div className="group relative">
                         <input
                           id="nombre-completo"
                           type="text"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
-                          className="w-full bg-transparent border border-white/[0.07] rounded-sm px-5 py-4 text-white placeholder:text-white/10 font-sans text-base transition-all duration-300 outline-none focus:border-gold/40 focus:bg-white/[0.015] focus:shadow-[0_0_20px_-8px_rgba(201,168,76,0.15)]"
+                          className="w-full bg-transparent border border-white/[0.07] rounded-sm px-5 py-4 text-white placeholder:text-white/20 font-sans text-base transition-all duration-300 outline-none focus:border-gold/40 focus:bg-white/[0.015] focus:shadow-[0_0_20px_-8px_rgba(201,168,76,0.15)]"
                           placeholder="Su nombre"
                           required
                         />
@@ -173,14 +173,14 @@ export default function Reservation() {
                       </div>
                     </div>
                     <div className="rsv-card form-group">
-                      <label htmlFor="correo-electronico" className="block font-sans text-white/30 text-[11px] tracking-[0.2em] uppercase mb-2.5">Correo electrónico</label>
+                      <label htmlFor="correo-electronico" className="block font-sans text-white/50 text-[11px] tracking-[0.2em] uppercase mb-2.5">Correo electrónico</label>
                       <div className="group relative">
                         <input
                           id="correo-electronico"
                           type="email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full bg-transparent border border-white/[0.07] rounded-sm px-5 py-4 text-white placeholder:text-white/10 font-sans text-base transition-all duration-300 outline-none focus:border-gold/40 focus:bg-white/[0.015] focus:shadow-[0_0_20px_-8px_rgba(201,168,76,0.15)]"
+                          className="w-full bg-transparent border border-white/[0.07] rounded-sm px-5 py-4 text-white placeholder:text-white/20 font-sans text-base transition-all duration-300 outline-none focus:border-gold/40 focus:bg-white/[0.015] focus:shadow-[0_0_20px_-8px_rgba(201,168,76,0.15)]"
                           placeholder="correo@ejemplo.com"
                           required
                         />
@@ -192,12 +192,12 @@ export default function Reservation() {
 
                 {/* Reservation Details */}
                 <div className="space-y-6">
-                  <p className="font-sans text-white/15 text-[10px] tracking-[0.3em] uppercase">
+                  <p className="font-sans text-white/30 text-[10px] tracking-[0.3em] uppercase">
                     Detalles de la reserva
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="rsv-card form-group">
-                      <label htmlFor="fecha" className="block font-sans text-white/30 text-[11px] tracking-[0.2em] uppercase mb-2.5">Fecha</label>
+                      <label htmlFor="fecha" className="block font-sans text-white/50 text-[11px] tracking-[0.2em] uppercase mb-2.5">Fecha</label>
                       <div className="group relative">
                         <input
                           id="fecha"
@@ -212,7 +212,7 @@ export default function Reservation() {
                     </div>
 
                     <div ref={dropdownRef} className="rsv-card form-group relative z-30">
-                      <label htmlFor="comensales" className="block font-sans text-white/30 text-[11px] tracking-[0.2em] uppercase mb-2.5">Comensales</label>
+                      <label htmlFor="comensales" className="block font-sans text-white/50 text-[11px] tracking-[0.2em] uppercase mb-2.5">Comensales</label>
                       <div className="group relative">
                         <button
                           id="comensales"
@@ -220,7 +220,7 @@ export default function Reservation() {
                           onClick={() => setDropdownOpen((prev) => !prev)}
                           className="w-full bg-transparent border border-white/[0.07] rounded-sm px-5 py-4 text-left font-sans text-base transition-all duration-300 outline-none focus:border-gold/40 focus:bg-white/[0.015] focus:shadow-[0_0_20px_-8px_rgba(201,168,76,0.15)] flex items-center justify-between cursor-pointer"
                         >
-                          <span className={guests ? "text-white" : "text-white/15"}>{guests ? `${guests} ${Number(guests) === 1 ? "persona" : "personas"}` : "Seleccionar"}</span>
+                          <span className={guests ? "text-white" : "text-white/30"}>{guests ? `${guests} ${Number(guests) === 1 ? "persona" : "personas"}` : "Seleccionar"}</span>
                           <svg className={`w-3 h-3 text-white/20 transition-transform duration-300 ${dropdownOpen ? "rotate-180" : ""}`} viewBox="0 0 12 8" fill="none">
                             <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
@@ -252,7 +252,7 @@ export default function Reservation() {
 
                 {/* Special Requests */}
                 <div className="rsv-card form-group space-y-6">
-                  <p className="font-sans text-white/15 text-[10px] tracking-[0.3em] uppercase">
+                  <p className="font-sans text-white/30 text-[10px] tracking-[0.3em] uppercase">
                     Solicitudes especiales
                   </p>
                   <div className="group relative">
@@ -260,7 +260,7 @@ export default function Reservation() {
                       id="solicitudes-especiales"
                       placeholder="Alergias, ocasiones especiales, preferencias de mesa..."
                       rows={4}
-                      className="w-full bg-transparent border border-white/[0.07] rounded-sm px-5 py-4 text-white placeholder:text-white/10 font-sans text-base transition-all duration-300 outline-none focus:border-gold/40 focus:bg-white/[0.015] focus:shadow-[0_0_20px_-8px_rgba(201,168,76,0.15)] resize-none"
+                      className="w-full bg-transparent border border-white/[0.07] rounded-sm px-5 py-4 text-white placeholder:text-white/20 font-sans text-base transition-all duration-300 outline-none focus:border-gold/40 focus:bg-white/[0.015] focus:shadow-[0_0_20px_-8px_rgba(201,168,76,0.15)] resize-none"
                     />
                     <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold/60 transition-all duration-500 ease-out group-focus-within:w-full" />
                   </div>
@@ -275,7 +275,7 @@ export default function Reservation() {
                     <span className="relative z-10 font-semibold">Confirmar Reserva</span>
                     <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700 ease-in-out" />
                   </button>
-                  <p className="font-sans text-white/10 text-[10px] tracking-[0.15em] mt-4">
+                  <p className="font-sans text-white/20 text-[10px] tracking-[0.15em] mt-4">
                     Recibirás una confirmación por correo electrónico
                   </p>
                 </div>

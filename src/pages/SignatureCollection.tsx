@@ -53,7 +53,7 @@ export default function SignatureCollection() {
             <h1 className="hero-reveal font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight max-w-4xl">
               Creaciones que Definen Nuestra Esencia
             </h1>
-            <p className="hero-reveal font-alt text-white/40 text-lg md:text-xl italic mt-6 max-w-2xl">
+            <p className="hero-reveal font-alt text-white/50 text-lg md:text-xl italic mt-6 max-w-2xl">
               Cuatro platos que representan lo mejor de nuestra cocina. Cada uno es una declaración de intenciones.
             </p>
           </div>

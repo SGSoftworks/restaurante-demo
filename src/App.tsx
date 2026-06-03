@@ -7,10 +7,12 @@ import ChefRecommendations from "./pages/ChefRecommendations";
 import SeasonalSpecials from "./pages/SeasonalSpecials";
 import Gallery from "./pages/Gallery";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollProgress />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />

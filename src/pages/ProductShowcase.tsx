@@ -43,7 +43,7 @@ export default function ProductShowcase() {
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight">
             Un Recorrido de Sabores
           </h1>
-          <p className="font-alt text-white/40 text-lg md:text-xl italic mt-6 max-w-xl mx-auto">
+          <p className="font-alt text-white/50 text-lg md:text-xl italic mt-6 max-w-xl mx-auto">
             Cada categoría es un capítulo en la historia de nuestra cocina
           </p>
         </div>

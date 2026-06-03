@@ -82,7 +82,7 @@ export default function Gallery() {
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight max-w-3xl">
               Una Experiencia Visual
             </h1>
-            <p className="font-alt text-white/40 text-lg md:text-xl italic mt-6 max-w-xl">
+            <p className="font-alt text-white/50 text-lg md:text-xl italic mt-6 max-w-xl">
               Cada imagen captura un momento de nuestra historia culinaria
             </p>
           </div>

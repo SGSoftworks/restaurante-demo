@@ -167,15 +167,31 @@ export default function Story() {
         ))}
 
         <div className="relative z-10 w-full h-full px-8 md:px-16 lg:px-24">
-          <div className="fixed right-8 md:right-12 top-1/2 -translate-y-1/2 text-right space-y-2">
-            {chapters.map((_, i) => (
-              <p
-                key={i}
-                className={`font-sans text-xs tracking-[0.3em] transition-colors duration-500 ${activeChapter === i ? "text-gold" : "text-white/20"}`}
-              >
-                0{i + 1}
-              </p>
-            ))}
+          <div className="fixed right-8 md:right-12 top-1/2 -translate-y-1/2 flex flex-col items-center gap-0">
+            {/* Vertical track */}
+            <div className="relative flex flex-col items-center">
+              <div className="absolute top-2 bottom-2 w-[1.5px] bg-white/[0.07]" />
+              <div
+                className="absolute top-2 w-[1.5px] bg-gold transition-all duration-200 ease-out"
+                style={{ height: `${((activeChapter + 0.5) / chapters.length) * 100}%` }}
+              />
+              {chapters.map((_, i) => (
+                <div key={i} className="relative flex items-center gap-3 py-2">
+                  <span
+                    className={`font-sans text-xs tracking-[0.3em] transition-all duration-500 ${
+                      activeChapter === i ? "text-gold font-semibold" : "text-white/20"
+                    }`}
+                  >
+                    0{i + 1}
+                  </span>
+                  <div
+                    className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
+                      activeChapter === i ? "bg-gold shadow-[0_0_6px_rgba(201,168,76,0.5)] scale-150" : "bg-white/[0.15]"
+                    }`}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           {chapters.map((ch, i) => (

@@ -57,7 +57,7 @@ export default function ChefRecommendations() {
                 &ldquo;La cocina es mi lenguaje. Cada plato que creo es una conversación entre la tradición y la innovación. Estos son los platos que mejor representan mi visión culinaria.&rdquo;
               </p>
               <div className="hero-el mt-8">
-                <p className="font-sans text-white/40 text-sm tracking-[0.2em] uppercase">Chef Ejecutivo · Materia</p>
+                <p className="font-sans text-white/50 text-sm tracking-[0.2em] uppercase">Chef Ejecutivo · Materia</p>
               </div>
             </div>
           </div>

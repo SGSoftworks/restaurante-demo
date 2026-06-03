@@ -93,7 +93,7 @@ export default function Experience() {
               </blockquote>
               <div className="mt-10">
                 <div className="w-12 h-[1px] bg-gold mx-auto mb-6" />
-                <p className="font-alt text-white/50 text-sm md:text-base tracking-[0.2em] uppercase">{ch.author}</p>
+                <p className="font-alt text-white/60 text-sm md:text-base tracking-[0.2em] uppercase">{ch.author}</p>
               </div>
             </div>
           ))}

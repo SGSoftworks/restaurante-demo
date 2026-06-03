@@ -99,14 +99,14 @@ export default function MenuCategories({ containerId }: { containerId: string })
                   <h3 className="cat-title font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-4">
                     <span className="text-mask-line"><span>{cat.title}</span></span>
                   </h3>
-                  <p className="cat-subtitle font-alt text-white/50 text-xl md:text-2xl italic mb-12">{cat.subtitle}</p>
+                  <p className="cat-subtitle font-alt text-white/60 text-xl md:text-2xl italic mb-12">{cat.subtitle}</p>
                   <div className="space-y-6 max-w-lg">
                     {cat.items.map((item, idx) => (
                       <div key={idx} className="cat-item border-b border-white/10 pb-4">
                         <div className="flex justify-between items-start gap-4">
                           <div>
                             <h4 className="font-serif text-white text-xl md:text-2xl font-bold">{item.name}</h4>
-                            <p className="font-sans text-white/50 text-sm md:text-base mt-1 leading-relaxed">{item.desc}</p>
+                            <p className="font-sans text-white/60 text-sm md:text-base mt-1 leading-relaxed">{item.desc}</p>
                           </div>
                           <span className="font-serif text-gold text-xl whitespace-nowrap">${item.price}</span>
                         </div>
@@ -140,7 +140,7 @@ export default function MenuCategories({ containerId }: { containerId: string })
                 <h3 className="cat-title font-serif text-4xl md:text-6xl lg:text-7xl text-white font-bold mb-4">
                   <span className="text-mask-line"><span>{cat.title}</span></span>
                 </h3>
-                <p className="cat-subtitle font-alt text-white/50 text-lg md:text-xl italic mb-12">{cat.subtitle}</p>
+                <p className="cat-subtitle font-alt text-white/60 text-lg md:text-xl italic mb-12">{cat.subtitle}</p>
 
                 <div className="space-y-8">
                   {cat.items.map((item, idx) => (
@@ -148,7 +148,7 @@ export default function MenuCategories({ containerId }: { containerId: string })
                       <div className="flex justify-between items-start gap-4">
                         <div>
                           <h4 className="font-serif text-white text-xl md:text-2xl font-bold">{item.name}</h4>
-                          <p className="font-sans text-white/50 text-sm md:text-base mt-2 leading-relaxed">{item.desc}</p>
+                          <p className="font-sans text-white/60 text-sm md:text-base mt-2 leading-relaxed">{item.desc}</p>
                         </div>
                         <span className="font-serif text-gold text-xl whitespace-nowrap">${item.price}</span>
                       </div>
