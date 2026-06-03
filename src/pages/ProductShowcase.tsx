@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "../components/SEO";
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
 import { categories } from "../data/menu";
@@ -34,6 +35,7 @@ export default function ProductShowcase() {
 
   return (
     <>
+      <SEO title="Carta" description="Explora la carta de Materia. Ramen, sushi, entradas, postres y maridajes en una experiencia gastronómica única." path="/carta" />
       <PageNav />
       <div className="pt-16 md:pt-20 bg-warm-black">
         <div className="px-8 md:px-16 lg:px-24 py-20 md:py-32 text-center">

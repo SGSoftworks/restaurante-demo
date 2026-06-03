@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import useLenis from "../hooks/useLenis";
 import Hero from "../components/Hero";
 import Story from "../components/Story";
@@ -13,6 +14,7 @@ export default function Home() {
 
   return (
     <>
+      <SEO title="Materia" description="Materia es una experiencia gastronómica donde la alta cocina se encuentra con el arte. Descubre nuestra historia, menú de autor y reserva tu velada." path="/" />
       <PageNav />
       <Hero />
       <Story />

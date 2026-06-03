@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "../components/SEO";
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
 import { getItemBySlug, categories } from "../data/menu";
@@ -41,6 +42,7 @@ export default function ProductDetail() {
   if (!item) {
     return (
       <>
+        <SEO title="Plato no encontrado" path={undefined} />
         <PageNav />
         <div className="pt-32 px-8 text-center min-h-screen flex flex-col items-center justify-center bg-warm-black">
           <p className="font-serif text-4xl text-white mb-4">Plato no encontrado</p>
@@ -53,6 +55,7 @@ export default function ProductDetail() {
 
   return (
     <>
+      <SEO title={item.name} description={item.desc} ogImage={item.image.replace("w=800", "w=1200")} path={`/producto/${item.slug}`} />
       <PageNav />
       <div className="pt-16 md:pt-20 bg-warm-black">
         <section ref={heroRef} className="relative min-h-screen flex items-center">

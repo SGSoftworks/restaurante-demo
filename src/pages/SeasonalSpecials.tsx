@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "../components/SEO";
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
 
@@ -62,6 +63,7 @@ export default function SeasonalSpecials() {
 
   return (
     <>
+      <SEO title="Especiales de Temporada" description="Especiales de primavera en Materia. Ingredientes de temporada seleccionados en su momento óptimo." path="/temporada" />
       <PageNav />
       <div className="pt-16 md:pt-20 bg-warm-black">
         <section ref={sectionRef} className="min-h-screen flex items-center relative overflow-hidden">

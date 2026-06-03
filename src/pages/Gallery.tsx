@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "../components/SEO";
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
 
@@ -72,6 +73,7 @@ export default function Gallery() {
 
   return (
     <>
+      <SEO title="Galería" description="Explora la galería visual de Materia. Cada imagen captura un momento de nuestra historia culinaria." path="/galeria" />
       <PageNav />
       <div className="pt-16 md:pt-20 bg-warm-black min-h-screen">
         <section className="px-8 md:px-16 lg:px-24 py-20 md:py-32">

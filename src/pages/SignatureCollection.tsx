@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "../components/SEO";
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
 import { featuredItems } from "../data/menu";
@@ -43,6 +44,7 @@ export default function SignatureCollection() {
 
   return (
     <>
+      <SEO title="Colección de Autor" description="Cuatro platos que definen la esencia de Materia. Creaciones signature que representan lo mejor de nuestra cocina." path="/coleccion" />
       <PageNav />
       <div className="pt-16 md:pt-20 bg-warm-black">
         <section ref={sectionRef} className="px-8 md:px-16 lg:px-24 py-20 md:py-32">

@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "../components/SEO";
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
 import { chefRecommendations } from "../data/menu";
@@ -36,6 +37,7 @@ export default function ChefRecommendations() {
 
   return (
     <>
+      <SEO title="Recomendaciones del Chef" description="Takashi Yamamoto, chef ejecutivo de Materia, comparte sus platos favoritos. Una selección personal para una experiencia completa." path="/chef" />
       <PageNav />
       <div className="pt-16 md:pt-20 bg-warm-black">
         <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden">
