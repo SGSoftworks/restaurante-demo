@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,6 +14,7 @@ export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
   const pinRef = useRef<HTMLDivElement>(null);
   const bgRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeChapter, setActiveChapter] = useState(0);
 
   useEffect(() => {
     ScrollTrigger.refresh();
@@ -27,6 +28,10 @@ export default function Experience() {
         scrub: 1,
         anticipatePin: 1,
         invalidateOnRefresh: true,
+        onUpdate: (self) => {
+          const idx = Math.min(Math.floor(self.progress * chapters.length), chapters.length - 1);
+          setActiveChapter(idx);
+        },
       });
 
       gsap.set(bgRefs.current.filter(Boolean), { opacity: 0 });
@@ -83,6 +88,33 @@ export default function Experience() {
             <div className="absolute inset-0" style={{ backgroundColor: `rgba(0,0,0,${ch.overlay})` }} />
           </div>
         ))}
+
+        {/* Chapter progress indicator */}
+        <div className="fixed right-8 md:right-12 top-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-0">
+          <div className="relative flex flex-col items-center">
+            <div className="absolute top-2 bottom-2 w-[1.5px] bg-white/[0.07]" />
+            <div
+              className="absolute top-2 w-[1.5px] bg-gold transition-all duration-200 ease-out"
+              style={{ height: `${((activeChapter + 0.5) / chapters.length) * 100}%` }}
+            />
+            {chapters.map((ch, i) => (
+              <div key={i} className="relative flex items-center gap-3 py-2">
+                <span
+                  className={`font-sans text-[10px] tracking-[0.3em] transition-all duration-500 hidden md:inline ${
+                    activeChapter === i ? "text-gold font-semibold" : "text-white/20"
+                  }`}
+                >
+                  {ch.label}
+                </span>
+                <div
+                  className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
+                    activeChapter === i ? "bg-gold shadow-[0_0_6px_rgba(201,168,76,0.5)] scale-150" : "bg-white/[0.15]"
+                  }`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="absolute inset-0 z-10 flex items-center justify-center px-8">
           {chapters.map((ch, i) => (
